@@ -65,8 +65,5 @@ fun ProfileScreen(viewModel: ProfileViewModel) {
                 }
             }
         }
-
     }
-
-
 }
