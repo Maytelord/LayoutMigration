@@ -27,7 +27,8 @@ class ProfileFragment: Fragment() {
 
 
         binding.viewModel = viewModel
-        companyAdapter.submitList(viewModel.companyData.value)
+       // companyAdapter.submitList(viewModel.companyData.value)
+
         binding.composeView.setContent {
             MaterialTheme {
                 ProfileScreen(viewModel)

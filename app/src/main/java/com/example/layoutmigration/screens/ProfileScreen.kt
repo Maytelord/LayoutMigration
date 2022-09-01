@@ -9,13 +9,18 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.material.Divider
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
+import androidx.compose.material.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.example.layoutmigration.R
 import com.example.layoutmigration.UserDisplay
 import com.example.layoutmigration.components.CVButton
@@ -29,6 +34,20 @@ fun ProfileScreen(viewModel: ProfileViewModel) {
         Column(
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
+            
+            TopAppBar() {
+                Text(
+                    text = stringResource(id = R.string.app_name),
+                    style = TextStyle(
+                        fontWeight = FontWeight.Bold,
+                        color = Color.White,
+                        fontSize = 16.sp
+                    )
+                )
+            }
+
+            Spacer(modifier = Modifier.height(16.dp))
+
             viewModel.userData.value?.let {
                 UserDisplay(user = it)
             }
