@@ -31,7 +31,7 @@ fun UserDisplay(user: User){
 }
 
 
-@Preview
+@Preview(showBackground = true)
 @Composable
 fun UserDisplayPreview(user: User = UserDataSource().userData()){
     UserDisplay(user)

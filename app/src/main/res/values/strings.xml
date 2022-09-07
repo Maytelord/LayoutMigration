@@ -4,4 +4,5 @@
     <string name="developer">Android Developer</string>
     <string name="add_experience">Add Experience</string>
     <string name="toast">Adding Experience!!</string>
+    <string name="detail_fragment">Detail Fragment!!</string>
 </resources>
